@@ -9,7 +9,11 @@ class App < Sinatra::Base
     erb :newteam
   end
   
-  get '/team' do 
+  # get '/team' do
+  #   "Hello World"
+  # end
+  
+  post '/team' do 
     @name = params[:name]
     @coach = params[:coach]
     @pg = params[:pg]
@@ -17,9 +21,6 @@ class App < Sinatra::Base
     @pf = params[:pf]
     @sf = params[:sf]
     @c = params[:c]
-    
     erb :team 
   end
-
-
 end
